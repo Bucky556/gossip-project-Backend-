@@ -68,7 +68,7 @@ public class PostController {
 
     @PostMapping("/filter")
     @Operation(summary = "Filter posts", description = "Filters posts based on search query, pagination")
-    public ResponseEntity<PageImpl<PostDTO>> filter(@RequestBody @Valid PostFilterDTO dto,
+    public ResponseEntity<PageImpl<PostDTO>> filter(@RequestBody PostFilterDTO dto,
                                                     @RequestParam(value = "page", defaultValue = "0") int page,
                                                     @RequestParam(value = "size", defaultValue = "10") int size) {
         return ResponseEntity.ok(postService.filter(dto, PageUtil.getCurrentPage(page), size));

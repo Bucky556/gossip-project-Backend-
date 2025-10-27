@@ -1,6 +1,5 @@
 package code.uz.dto;
 
-import code.uz.entity.PostEntity;
 import lombok.Getter;
 import lombok.Setter;
 
